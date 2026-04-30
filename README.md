@@ -14,28 +14,4 @@
 
 ## Крок 3. Діаграма прецедентів (Use Case Diagram)
 Актори: Гість (Guest), Користувач (User).
-```mermaid
-usecaseDiagram
-    actor "Гість" as Guest
-    actor "Користувач" as User
-    
-    package "DocuCT System" {
-        usecase "Реєстрація" as UC1
-        usecase "Управління Workspace" as UC2
-        usecase "Завантаження документа" as UC3
-        usecase "Створення Схеми" as UC4
-        usecase "Розпізнавання документа" as UC5
-        usecase "Перевірка лімітів" as UC6
-        usecase "Експорт даних" as UC7
-        usecase "Редагування результатів" as UC8
-    }
-    
-    Guest --> UC1
-    User --> UC2
-    User --> UC3
-    User --> UC4
-    User --> UC5
-    User --> UC7
-    
-    UC5 ..> UC6 : <<include>>
-    UC8 ..> UC5 : <<extend>>
+
